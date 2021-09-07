@@ -14,3 +14,19 @@
 # Avoid your project being littered with annoying .DS_Store files!
 .DS_Store
 .prettierignore
+
+# Misc
+*.log
+npm-debug.*
+*.scssc
+*.swp
+.DS_Store
+Thumbs.db
+.sass-cache
+.env
+.cache
+
+# Node modules and output
+node_modules
+dist
+src/_includes/css
