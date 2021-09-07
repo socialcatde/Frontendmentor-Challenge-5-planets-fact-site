@@ -1,0 +1,9 @@
+<h2><%- title %></h2>
+<ul class="nav_list">
+  <% for (planet of planets) {%>
+  <li>
+    <button id="<%= planet.name %>"><%= planet.name %></button>
+
+    <% } %>
+  </li>
+</ul>

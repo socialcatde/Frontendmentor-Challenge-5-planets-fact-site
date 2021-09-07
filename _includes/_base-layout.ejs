@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <% include _head.ejs %>
+    <% include partials/_head.ejs %>
   </head>
   <body>
-    <% include _header.ejs %>
-    <main><%- content %></main>
-    <% include _footer.ejs %>
+    <% include partials/_header.ejs %>
+    <main><% include partials/_content.ejs %></main>
+    <% include partials/_footer.ejs %>
   </body>
 </html>
