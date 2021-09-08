@@ -1,4 +1,71 @@
-<p id="overview"><%- overview %></p>
-<% for (planet of planets) {%>
-<p><%= planet.overview.content %></p>
+<% for (p of planets) {%> <% if (page.url === `/${p.name.toLowerCase()}/`) {%>
+<div class="submenu">
+  <button class="contentButton">Overview</button>
+  <button class="contentButton">Structure</button>
+  <button class="contentButton">Surface</button>
+</div>
+
+<img
+  class="planetImg"
+  src="<%= p.images.planet %>"
+  alt="Illustration of <%= p.name %>"
+/>
+<img
+  class="planetImg"
+  src="<%= p.images.internal %>"
+  alt="Internal view of <%= p.name %>"
+/>
+<img
+  class="planetImg"
+  src="<%= p.images.geology %>"
+  alt="Geology of <%= p.name %>"
+/>
+<div class="information">
+  <h3><%= p.name %></h3>
+  <section class="facts">
+    <p><%= p.overview.content %></p>
+    <a href="<%= p.overview.source %>">Wikipedia</a>
+  </section>
+  <section class="facts">
+    <p><%= p.structure.content %></p>
+    <a href="<%= p.structure.source %>">Wikipedia</a>
+  </section>
+  <section class="facts">
+    <p><%= p.geology.content %></p>
+    <a href="<%= p.geology.source %>">Wikipedia</a>
+  </section>
+</div>
+<div class="hard-facts">
+  <p class="facts-txt">Rotation time <%= p.rotation %></p>
+  <p class="facts-txt">Revolution time <%= p.revolution %></p>
+  <p class="facts-txt">Radius <%= p.radius %></p>
+  <p class="facts-txt">Average Temp. <%= p.temperature %></p>
+</div>
+
+<% } } %> <% if (page.url === "/") { %>
+
+<p><%= planets[0].name %></p>
+<p><%= planets[0].overview.content %></p>
+<p><%= planets[0].overview.source %></p>
+<p><%= planets[0].structure.content %></p>
+<p><%= planets[0].structure.source %></p>
+<p><%= planets[0].geology.content %></p>
+<p><%= planets[0].geology.source %></p>
+<p><%= planets[0].rotation %></p>
+<p><%= planets[0].revolution %></p>
+<p><%= planets[0].radius %></p>
+<p><%= planets[0].temperature %></p>
+<img
+  src="<%= planets[0].images.planet %>"
+  alt="Illustration of <%= planets[0].name %>"
+/>
+<img
+  src="<%= planets[0].images.internal %>"
+  alt="Internal view of <%= planets[0].name %>"
+/>
+<img
+  src="<%= planets[0].images.geology %>"
+  alt="Geology of <%= planets[0].name %>"
+/>
+
 <% } %>

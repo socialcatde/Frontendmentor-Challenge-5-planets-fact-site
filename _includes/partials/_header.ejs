@@ -1,9 +1,30 @@
-<h2><%- title %></h2>
-<ul class="nav_list">
-  <% for (planet of planets) {%>
-  <li>
-    <button id="<%= planet.name %>"><%= planet.name %></button>
-
-    <% } %>
-  </li>
-</ul>
+<nav>
+  <div class="headline">
+    <h1><%- title %></h1>
+    <img class="hamburger" src="/img/icon-hamburger.svg" alt="" />
+  </div>
+  <ul class="nav_list">
+    <% for (planet of planets) {%>
+    <li>
+      <div class="planetNav">
+        <span
+          class="planet-menu"
+          id="span<%= planet.name.toLowerCase() %>"
+          aria-hidden="true"
+        ></span>
+        <a
+          id="<%= planet.name.toLowerCase() %>"
+          href="/<%= planet.name.toLowerCase() %>"
+          ><%= planet.name %></a
+        >
+      </div>
+      <span class="arrow"
+        ><img
+          src="/img/icon-chevron.svg"
+          aria-hidden="true"
+          alt="Navigation Arrow"
+      /></span>
+      <% } %>
+    </li>
+  </ul>
+</nav>

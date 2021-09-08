@@ -1,0 +1,138 @@
+body {
+  background-image: url(/img/background-stars.svg);
+  background-color: #070724;
+  color: white;
+  font-family: "Spartan", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: "Antonio", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline;
+}
+
+h2 {
+  font-family: "Antonio", sans-serif;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -1.5px;
+  font-weight: 500;
+}
+
+h3 {
+  font-family: "Spartan", sans-serif;
+  font-size: 12px;
+  line-height: 25px;
+  letter-spacing: 2.6px;
+  font-weight: 700;
+}
+
+h4 {
+  font-family: "Spartan", sans-serif;
+  font-size: 11px;
+  line-height: 25px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.headline {
+  border-bottom: 1px solid #979797a6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.hamburger {
+  width: 24px;
+  height: 17px;
+}
+
+nav {
+  background-color: #070724;
+}
+
+.nav_list {
+  list-style: none;
+  color: white;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100vh;
+  padding-left: 20px;
+  margin-top: 16px;
+}
+
+.nav_list li {
+  border-bottom: 1px solid #97979759;
+  width: 94%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.nav_list li:last-child {
+  border-bottom: 0px;
+}
+
+.planet-menu {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.planetNav {
+  display: flex;
+}
+
+.nav_list a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1.36px;
+  text-transform: uppercase;
+}
+
+.arrow {
+  margin-right: 5px;
+}
+
+#spanmercury {
+  background-color: #def4fc;
+}
+#spanvenus {
+  background-color: #f7cc7f;
+}
+#spanearth {
+  background-color: #545bfe;
+}
+#spanmars {
+  background-color: #ff6a45;
+}
+#spanjupiter {
+  background-color: #ecad7a;
+}
+#spansaturn {
+  background-color: #fccb6b;
+}
+#spanuranus {
+  background-color: #65f0d5;
+}
+#spanneptune {
+  background-color: #497efa;
+}
+
+.planetImg {
+  width: 100%;
+}
