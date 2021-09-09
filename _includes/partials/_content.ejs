@@ -1,5 +1,5 @@
 <% for (p of planets) {%> <% if (page.url === `/${p.name.toLowerCase()}/`) {%>
-<div class="submenu" id="<%= p.name %>-buttons">
+<div class="submenu" id="<%= p.name.toLowerCase() %>-buttons">
   <button class="contentButton">Overview</button>
   <button class="contentButton">Structure</button>
   <button class="contentButton">Surface</button>

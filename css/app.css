@@ -170,12 +170,38 @@ nav {
   padding: 17px 5px;
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
+  transition: all 0.4s ease;
 }
 
 .contentButton:hover {
   border-bottom: 4px solid #419ebb;
   cursor: pointer;
   color: white;
+}
+
+#mercury-buttons .contentButton:hover {
+  border-bottom: 4px solid #419ebb;
+}
+#venus-buttons .contentButton:hover {
+  border-bottom: 4px solid #eda249;
+}
+#earth-buttons .contentButton:hover {
+  border-bottom: 4px solid #6d2ed5;
+}
+#mars-buttons .contentButton:hover {
+  border-bottom: 4px solid #d14c32;
+}
+#jupiter-buttons .contentButton:hover {
+  border-bottom: 4px solid #d83a34;
+}
+#saturn-buttons .contentButton:hover {
+  border-bottom: 4px solid #cd5120;
+}
+#uranus-buttons .contentButton:hover {
+  border-bottom: 4px solid #1ec1a2;
+}
+#neptune-buttons .contentButton:hover {
+  border-bottom: 4px solid #2d68f0;
 }
 
 .planetImg {
