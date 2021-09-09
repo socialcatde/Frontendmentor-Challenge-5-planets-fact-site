@@ -1,5 +1,6 @@
 body {
   background-image: url(/img/background-stars.svg);
+  background-attachment: fixed;
   background-color: #070724;
   color: white;
   font-family: "Spartan", sans-serif;
@@ -50,25 +51,45 @@ h4 {
   padding: 5px 20px;
 }
 
-.hamburger {
-  width: 24px;
-  height: 17px;
-}
-
 nav {
   background-color: #070724;
+  position: sticky;
+  top: 0;
+  height: 73.3px;
+  transition: height 0.4s ease;
+}
+
+.hamburger {
+  padding: 0;
+  display: flex;
 }
 
 .nav_list {
   list-style: none;
   color: white;
   padding: 0px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  height: 100vh;
   padding-left: 20px;
+  margin: 0;
+  visibility: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease, visibility 0.1s ease, margin 0.4s ease;
+}
+
+.nav_list_open_body .nav_list {
   margin-top: 16px;
+  visibility: visible;
+  max-height: 9000px;
+  opacity: 1;
+}
+
+.nav_list_open_body nav {
+  height: 100vh;
+  overflow: auto;
+}
+
+.nav_list_open_body {
+  overflow: hidden;
 }
 
 .nav_list li {
@@ -131,6 +152,30 @@ nav {
 }
 #spanneptune {
   background-color: #497efa;
+}
+
+.submenu {
+  border-bottom: 1px solid #979797a6;
+  display: flex;
+  justify-content: space-evenly;
+}
+.contentButton {
+  color: #838391;
+  background: none;
+  border: none;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.93px;
+  text-transform: uppercase;
+  padding: 17px 5px;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+.contentButton:hover {
+  border-bottom: 4px solid #419ebb;
+  cursor: pointer;
+  color: white;
 }
 
 .planetImg {
