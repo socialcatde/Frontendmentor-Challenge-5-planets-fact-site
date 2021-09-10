@@ -1,18 +1,18 @@
 <% for (p of planets) {%> <% if (page.url === `/${p.name.toLowerCase()}/`) {%>
 <div class="submenu" id="<%= p.name.toLowerCase() %>-buttons">
-  <button class="contentButton">Overview</button>
-  <button class="contentButton">Structure</button>
-  <button class="contentButton">Surface</button>
+  <button class="contentButton overview">Overview</button>
+  <button class="contentButton structure">Structure</button>
+  <button class="contentButton surface">Surface</button>
 </div>
 
 <div class="planet-box">
   <img
-    class="outside-planet"
+    class="outside-planet <%= p.name.toLowerCase() %>-size"
     src="<%= p.images.planet %>"
     alt="Illustration of <%= p.name %>"
   />
   <img
-    class="inside-planet"
+    class="inside-planet <%= p.name.toLowerCase() %>-size"
     src="<%= p.images.internal %>"
     alt="Internal view of <%= p.name %>"
   />
@@ -22,17 +22,18 @@
     alt="Geology of <%= p.name %>"
   />
 </div>
+
 <div class="information">
-  <h3><%= p.name %></h3>
-  <section class="facts">
+  <h2><%= p.name %></h2>
+  <section class="facts outside-txt">
     <p><%= p.overview.content %></p>
     <a href="<%= p.overview.source %>">Wikipedia</a>
   </section>
-  <section class="facts">
+  <section class="facts inside-txt">
     <p><%= p.structure.content %></p>
     <a href="<%= p.structure.source %>">Wikipedia</a>
   </section>
-  <section class="facts">
+  <section class="facts real-txt">
     <p><%= p.geology.content %></p>
     <a href="<%= p.geology.source %>">Wikipedia</a>
   </section>
@@ -46,27 +47,29 @@
 
 <% } } %> <% if (page.url === "/") { %>
 
-<div class="submenu">
-  <button class="contentButton">Overview</button>
-  <button class="contentButton">Structure</button>
-  <button class="contentButton">Surface</button>
+<div class="submenu" id="<%= p.name.toLowerCase() %>-buttons">
+  <button class="contentButton overview">Overview</button>
+  <button class="contentButton structure">Structure</button>
+  <button class="contentButton surface">Surface</button>
 </div>
 
-<img
-  class="planetImg"
-  src="<%= p.images.planet %>"
-  alt="Illustration of <%= p.name %>"
-/>
-<img
-  class="planetImg"
-  src="<%= p.images.internal %>"
-  alt="Internal view of <%= p.name %>"
-/>
-<img
-  class="planetImg"
-  src="<%= p.images.geology %>"
-  alt="Geology of <%= p.name %>"
-/>
+<div class="planet-box">
+  <img
+    class="outside-planet <%= p.name.toLowerCase() %>-size"
+    src="<%= p.images.planet %>"
+    alt="Illustration of <%= p.name %>"
+  />
+  <img
+    class="inside-planet <%= p.name.toLowerCase() %>-size"
+    src="<%= p.images.internal %>"
+    alt="Internal view of <%= p.name %>"
+  />
+  <img
+    class="real-planet"
+    src="<%= p.images.geology %>"
+    alt="Geology of <%= p.name %>"
+  />
+</div>
 <div class="information">
   <h3><%= p.name %></h3>
   <section class="facts">
