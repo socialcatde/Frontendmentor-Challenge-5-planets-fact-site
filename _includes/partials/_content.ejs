@@ -5,21 +5,23 @@
   <button class="contentButton">Surface</button>
 </div>
 
-<img
-  class="planetImg"
-  src="<%= p.images.planet %>"
-  alt="Illustration of <%= p.name %>"
-/>
-<img
-  class="planetImg"
-  src="<%= p.images.internal %>"
-  alt="Internal view of <%= p.name %>"
-/>
-<img
-  class="planetImg"
-  src="<%= p.images.geology %>"
-  alt="Geology of <%= p.name %>"
-/>
+<div class="planet-box">
+  <img
+    class="outside-planet"
+    src="<%= p.images.planet %>"
+    alt="Illustration of <%= p.name %>"
+  />
+  <img
+    class="inside-planet"
+    src="<%= p.images.internal %>"
+    alt="Internal view of <%= p.name %>"
+  />
+  <img
+    class="real-planet"
+    src="<%= p.images.geology %>"
+    alt="Geology of <%= p.name %>"
+  />
+</div>
 <div class="information">
   <h3><%= p.name %></h3>
   <section class="facts">
