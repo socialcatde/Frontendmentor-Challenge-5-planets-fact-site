@@ -29,61 +29,35 @@ hamburger.addEventListener("click", function () {
 document
   .querySelector(planetFacts[0].buttonPlanet)
   .classList.add(`${subMenuId}-active`);
+document
+  .querySelector(planetFacts[0].textPlanet)
+  .classList.add("visible-planet");
 
 for (const choice of contentButton) {
   choice.addEventListener("click", function () {
-    choice.classList.add(`${subMenuId}-active`);
-
     for (const planetFact of planetFacts) {
-      if (
+      /* Menu active states */
+      if (document.querySelector(planetFact.buttonPlanet) === choice) {
         document
           .querySelector(planetFact.buttonPlanet)
-          .classList.contains(`${subMenuId}-active`) &&
-        document.querySelector(planetFact.buttonPlanet) !== choice
-      ) {
+          .classList.add(`${subMenuId}-active`);
+        document
+          .querySelector(planetFact.planet)
+          .classList.add("visible-planet");
+        document
+          .querySelector(planetFact.textPlanet)
+          .classList.add("visible-planet");
+      } else {
         document
           .querySelector(planetFact.buttonPlanet)
           .classList.remove(`${subMenuId}-active`);
+        document
+          .querySelector(planetFact.planet)
+          .classList.remove("visible-planet");
+        document
+          .querySelector(planetFact.textPlanet)
+          .classList.remove("visible-planet");
       }
     }
   });
 }
-
-/* for (const choice of contentButton) {
-  choice.addEventListener("click", function () {
-    if (choice.textContent.toLowerCase() === "overview") {
-      insidePlanet.classList.remove("visible-planet");
-      realPlanet.classList.remove("visible-planet");
-      TxtOutsidePlanet.classList.remove("invisible-planet");
-      TxtInsidePlanet.classList.remove("visible-planet");
-      TxtRealPlanet.classList.remove("visible-planet");
-      choice.classList.add(`${subMenuId}-active`);
-      structureButton.classList.remove(`${subMenuId}-active`);
-      surfaceButton.classList.remove(`${subMenuId}-active`);
-    } else if (choice.textContent.toLowerCase() === "structure") {
-      outsidePlanet.classList.remove("visible-planet");
-      insidePlanet.classList.add("visible-planet");
-      realPlanet.classList.remove("visible-planet");
-
-      TxtOutsidePlanet.classList.remove("visible-planet");
-      TxtInsidePlanet.classList.add("visible-planet");
-      TxtRealPlanet.classList.remove("visible-planet");
-      TxtOutsidePlanet.classList.add("invisible-planet");
-
-      choice.classList.add(`${subMenuId}-active`);
-      overviewButton.classList.remove(`${subMenuId}-active`);
-      surfaceButton.classList.remove(`${subMenuId}-active`);
-    } else if (choice.textContent.toLowerCase() === "surface") {
-      outsidePlanet.classList.remove("visible-planet");
-      insidePlanet.classList.remove("visible-planet");
-      realPlanet.classList.add("visible-planet");
-      TxtOutsidePlanet.classList.remove("visible-planet");
-      TxtInsidePlanet.classList.remove("visible-planet");
-      TxtRealPlanet.classList.add("visible-planet");
-      TxtOutsidePlanet.classList.add("invisible-planet");
-      choice.classList.add(`${subMenuId}-active`);
-      overviewButton.classList.remove(`${subMenuId}-active`);
-      structureButton.classList.remove(`${subMenuId}-active`);
-    }
-  });
-} */
