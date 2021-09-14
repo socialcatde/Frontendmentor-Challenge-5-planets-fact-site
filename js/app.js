@@ -1,6 +1,5 @@
 const hamburger = document.querySelector(".hamburger--squeeze");
 const contentButton = document.querySelectorAll(".contentButton");
-
 const planetFacts = [
   {
     planet: ".planet-box .outside-planet",
@@ -61,3 +60,7 @@ for (const choice of contentButton) {
     }
   });
 }
+
+window.onload = function () {
+  document.body.classList.remove("preload");
+};

@@ -2,9 +2,17 @@
 (page.url === "/" && `${p.name.toLowerCase()}` === "earth" ) ) {%>
 
 <div class="submenu" id="<%= p.name.toLowerCase() %>-buttons">
-  <button class="contentButton overview">Overview</button>
-  <button class="contentButton structure">Structure</button>
-  <button class="contentButton surface">Surface</button>
+  <button class="contentButton overview">
+    <span class="number-change big-screen">01</span>Overview
+  </button>
+  <button class="contentButton structure">
+    <span class="number-change big-screen">02</span
+    ><span class="big-screen">Internal</span> Structure
+  </button>
+  <button class="contentButton surface">
+    <span class="number-change big-screen">03</span>Surface
+    <span class="big-screen">Geology</span>
+  </button>
 </div>
 
 <div class="planet-box">
@@ -29,22 +37,40 @@
   <h2><%= p.name %></h2>
   <section class="facts outside-txt">
     <p><%= p.overview.content %></p>
-    <a href="<%= p.overview.source %>">Wikipedia</a>
+    <p class="quelle">
+      Source: <a href="<%= p.overview.source %>">Wikipedia</a>
+    </p>
   </section>
   <section class="facts inside-txt">
     <p><%= p.structure.content %></p>
-    <a href="<%= p.structure.source %>">Wikipedia</a>
+    <p class="quelle">
+      Source: <a href="<%= p.structure.source %>">Wikipedia</a>
+    </p>
   </section>
   <section class="facts real-txt">
     <p><%= p.geology.content %></p>
-    <a href="<%= p.geology.source %>">Wikipedia</a>
+    <p class="quelle">
+      Source: <a href="<%= p.geology.source %>">Wikipedia</a>
+    </p>
   </section>
 </div>
 <div class="hard-facts">
-  <p class="facts-txt">Rotation time <%= p.rotation %></p>
-  <p class="facts-txt">Revolution time <%= p.revolution %></p>
-  <p class="facts-txt">Radius <%= p.radius %></p>
-  <p class="facts-txt">Average Temp. <%= p.temperature %></p>
+  <div class="facts-txt">
+    <span class="facts-desc">Rotation time</span>
+    <span class="number-facts"><%= p.rotation %></span>
+  </div>
+  <div class="facts-txt">
+    <span class="facts-desc">Revolutin time</span>
+    <span class="number-facts"><%= p.revolution %></span>
+  </div>
+  <div class="facts-txt">
+    <span class="facts-desc">Radius</span>
+    <span class="number-facts"><%= p.radius %></span>
+  </div>
+  <div class="facts-txt">
+    <span class="facts-desc">Averag Temp.</span>
+    <span class="number-facts"><%= p.temperature %></span>
+  </div>
 </div>
 
 <% } } %>
